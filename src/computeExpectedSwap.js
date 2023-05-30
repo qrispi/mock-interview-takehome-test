@@ -9,14 +9,24 @@ class ComputeExpectedSwap {
     computeExpectedSwapOut(amountIn, reserveIn, reserveOut, fee) {
         // TASK 1: Complete method
         // x * y = k, denotes the price curve
-        // x = reserveIn
-        // y = reserveOut
+        // x = reserveIn after swap
+        // y = reserveOut after swap
         // k = invariant, must always remain constant and represents the price relationship of one token to another
         // tokens must be transferred to pairs before swap is called
 
-        
+        // Establish the curve
+        const k = reserveIn * reserveOut
 
-        return 0;
+        // Add incoming tokens to incoming reserve
+        const x = reserveIn + amountIn
+
+        // Determine new reserve of outgoing tokens
+        const y = k / x
+
+        // Determine output of traded tokens
+        const output = reserveOut - y
+
+        return output;
     }
 }
 
