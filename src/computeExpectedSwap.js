@@ -8,6 +8,13 @@ class ComputeExpectedSwap {
     */
     computeExpectedSwapOut(amountIn, reserveIn, reserveOut, fee) {
         // TASK 1: Complete method
+        // x * y = k, denotes the price curve
+        // x = reserveIn
+        // y = reserveOut
+        // k = invariant, must always remain constant and represents the price relationship of one token to another
+        // tokens must be transferred to pairs before swap is called
+
+        
 
         return 0;
     }
